@@ -1,0 +1,57 @@
+.hidden {
+    display: none;
+}
+nav
+{
+   background-color: rgb(230, 230, 230);
+   padding: 1em;
+   
+}
+ 
+nav a { display: block;
+margin-right: 5%;
+}
+nav a:hover
+{
+    background-color: rgb(245, 245, 245);
+}
+#view
+{
+   width: 60%; 
+}
+#view2
+{
+   width: 30%;
+   
+}
+
+@media screen and (min-width: 600px){
+  nav a { display: inline;}
+  section {float:left;}  
+}
+img.kuva
+{
+   float:left;
+   margin-right: 1%;
+ }
+li
+{
+   list-style: none;   
+}
+li.listaKuvalla
+{
+    list-style: none;
+}
+ul
+{
+    margin-right: 2%;
+    padding-left:0%;
+}
+a 
+{
+    text-decoration:none;
+}
+a:hover
+{
+  text-decoration:underline;     
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!--Kari Korpinen web-selainohjelmointiharjoitustyö 13.1.2013--> 
+      <meta charset="utf-8"></meta>
+      <title>Web-selainohjelmointi harjoitustyö</title>
+      <link rel="stylesheet" href="style.css" type="text/css" />
+   </head>
+   <body>
+      <header>
+         <h1>Web-selainohjelmointi harjoitustyö</h1>
+            <nav>
+               <a href="#">Etusivu</a>
+               <a href="#">Opiskelu</a>
+               <a href="#">Tutkimus</a>
+            </nav>
+      </header>
+      <section id="main"></section>
+      <div class="koko">   
+         <section id="view">view
+         </section>
+         <section id="view2">view2
+         </section>   
+      </div>
+      
+      <script id="template0" type="text/html">
+         <article>
+	    {{#uutiset}}
+            <a href="{{linkki}}"><h2>{{otsikko}}</h2></a>
+            <ul>
+               <li class="listaKuvalla">  
+                  <span>
+                     {{#kuva}}
+                     <img src="{{kuvalinkki}}" class="kuva" height="{{korkeus}}" width="{{leveys}}" alt="kuva" />
+                     {{/kuva}}
+                     {{teksti}}
+                  </span>
+                  <a href="{{linkki}}">{{loppu}}</a>   
+               </li>
+            </ul>
+            {{/uutiset}}
+         </article>
+      </script>
+      <script id="template0B" type="text/html">
+       	 <article>
+	 {{#ajankohtaista}}
+            <img src="{{kuvalinkki}}" class="kuva" height="{{kuvakorkeus}}" width="{{kuvaleveys}}" />
+            <h2>{{otsikko}}</h2>
+            <ul>
+            {{#aiheet}}    
+               <li>  
+                  <span>
+                     <a href="{{aihelinkki}}">{{aiheteksti}}</a>     
+                  </span><p></p>
+               </li>
+               {{/aiheet}}
+            </ul>
+            {{/ajankohtaista}}
+         </article>
+      </script>
+      <script id="template1" type="text/html">
+      	 <article>
+	 {{#kurssitiedot}}
+            <h2>{{otsikko}}</h2>
+            <ul>
+            {{#kursseistaInfoa}}
+               <li>  
+                  <span>
+                     <span><a href="{{linkki}}">{{infoOtsikko}}</a></span>
+                  </span>
+               </li>
+               {{/kursseistaInfoa}}
+            </ul>
+            {{/kurssitiedot}}
+         </article>
+      </script>
+      <script id="template1B" type="text/html">
+         <article>
+	 {{#kurssitiedot}}
+            <h2>{{otsikko}}</h2>
+            <ul>
+            {{#kursseistaInfoa}}
+               <li>  
+                  <span>
+                     <span><a href="{{linkki}}">{{infoOtsikko}}</a></span>
+                  </span><p></p>
+               </li>
+               {{/kursseistaInfoa}}
+            </ul>
+            {{/kurssitiedot}}
+         </article>
+      </script>
+      <script id="template2" type="text/html">
+         <article>
+         {{#tutkimukset}}
+            <h2>{{tutkimuksenSuorittajat}}</h2>
+            <ul>
+            {{#tutkimus}}
+               <li>  
+                  <span>
+                     <span><a href="{{linkki1}}">{{nimi}}</a></span>
+                  </span>
+                  <span>
+                     <span><a href="{{linkki2}}"><strong>{{aihe}}</strong></a></span>
+                  </span>
+               </li>
+               {{/tutkimus}}
+            </ul>
+            {{/tutkimukset}}
+         </article>
+      </script>
+      
+      <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+      <script type="text/javascript" src="mustache.js"></script>
+      <script type="text/javascript" src="underscore-min.js"></script>
+      <script type="text/javascript" src="backbone-min.js"></script>
+      <script type="text/javascript" src="etusivun.js"></script>
+      <script type="text/javascript" src="code.js"></script>
+   </body>
+</html>
+
